@@ -71,7 +71,7 @@ class MergeImage(CheckSolution):
     
     def test_case_3(self, solution):
         try:
-            return solution[350,350] == np.array([1,20,34])
+            return bool(np.equal(solution[350,350], np.array([1,20,34])).all())
         except:
             return False
         
